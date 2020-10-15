@@ -14,6 +14,10 @@
 		F77A0C682538A03400CE8B31 /* TennisApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F77A0C662538A03400CE8B31 /* TennisApp.xcdatamodeld */; };
 		F77A0C732538A03500CE8B31 /* TennisAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A0C722538A03500CE8B31 /* TennisAppTests.swift */; };
 		F77A0C7E2538A03500CE8B31 /* TennisAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A0C7D2538A03500CE8B31 /* TennisAppUITests.swift */; };
+		F77A0CBA2538AE1700CE8B31 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A0CB92538AE1700CE8B31 /* HomeTabView.swift */; };
+		F77A0CD22538AEA600CE8B31 /* TournamentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A0CCB2538AEA500CE8B31 /* TournamentsView.swift */; };
+		F77A0CD32538AEA600CE8B31 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A0CCD2538AEA600CE8B31 /* MatchesView.swift */; };
+		F77A0CD62538AEA600CE8B31 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A0CD12538AEA600CE8B31 /* RankingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		F77A0C792538A03500CE8B31 /* TennisAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TennisAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77A0C7D2538A03500CE8B31 /* TennisAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisAppUITests.swift; sourceTree = "<group>"; };
 		F77A0C7F2538A03500CE8B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F77A0CB92538AE1700CE8B31 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		F77A0CCB2538AEA500CE8B31 /* TournamentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentsView.swift; sourceTree = "<group>"; };
+		F77A0CCD2538AEA600CE8B31 /* MatchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		F77A0CD12538AEA600CE8B31 /* RankingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,10 @@
 		F77A0CAA2538A5CB00CE8B31 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F77A0CB82538ADF500CE8B31 /* Main */,
+				F77A0CCC2538AEA600CE8B31 /* Matches */,
+				F77A0CD02538AEA600CE8B31 /* Ranking */,
+				F77A0CCA2538AEA500CE8B31 /* Tournaments */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +191,38 @@
 			children = (
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F77A0CB82538ADF500CE8B31 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F77A0CB92538AE1700CE8B31 /* HomeTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F77A0CCA2538AEA500CE8B31 /* Tournaments */ = {
+			isa = PBXGroup;
+			children = (
+				F77A0CCB2538AEA500CE8B31 /* TournamentsView.swift */,
+			);
+			path = Tournaments;
+			sourceTree = "<group>";
+		};
+		F77A0CCC2538AEA600CE8B31 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				F77A0CCD2538AEA600CE8B31 /* MatchesView.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		F77A0CD02538AEA600CE8B31 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				F77A0CD12538AEA600CE8B31 /* RankingView.swift */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +355,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77A0C682538A03400CE8B31 /* TennisApp.xcdatamodeld in Sources */,
+				F77A0CD62538AEA600CE8B31 /* RankingView.swift in Sources */,
 				F77A0C652538A03400CE8B31 /* Persistence.swift in Sources */,
+				F77A0CD22538AEA600CE8B31 /* TournamentsView.swift in Sources */,
+				F77A0CBA2538AE1700CE8B31 /* HomeTabView.swift in Sources */,
+				F77A0CD32538AEA600CE8B31 /* MatchesView.swift in Sources */,
 				F77A0C5C2538A03200CE8B31 /* TennisAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
