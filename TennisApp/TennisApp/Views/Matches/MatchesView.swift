@@ -9,8 +9,20 @@
 import SwiftUI
 
 struct MatchesView: View {
+    @State var date = Date()
+    @State var matches = [MatchesOnTournament]()
+    
     var body: some View {
-        Text("Matches")
+        NavigationView {
+            VStack {
+                DatePicker(Strings.matchDate, selection: $date, displayedComponents: .date)
+                    .datePickerStyle(CompactDatePickerStyle())
+                    .padding()
+                Spacer()
+                // TODO: show matches groupped by tournament
+            }
+            .navigationTitle(Strings.matches)
+        }
     }
 }
 

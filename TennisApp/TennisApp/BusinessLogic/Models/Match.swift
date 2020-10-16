@@ -7,6 +7,17 @@
 
 import Foundation
 
+// MARK: - MatchesOnDateResponse
+struct MatchesOnDateResponse: Codable {
+    let result: [MatchesOnTournament]
+}
+
+// MARK: - MatchesOnTournament
+struct MatchesOnTournament: Codable {
+    let tournament: Tournament
+    let matches: [Match]
+}
+
 // MARK: - Match
 struct Match: Codable {
     let away: MatchPlayer
@@ -23,6 +34,10 @@ struct Match: Codable {
     let roundName: String
     let status: String
     let title: String
+    
+    static func mock() -> Match {
+        return Match(away: MatchPlayer.mockAway(), awayID: 2, awayPlayer: "Rafa Nadal", court: "Main", date: Date(), home: MatchPlayer.mockHome(), homeID: 1, homePlayer: "Novak Djokovich", id: 1, result: MatchResult.mock(), roundID: 1, roundName: "Final", status: "Ended", title: "Roland-Garros Men's Final")
+    }
 }
 
 // MARK: - Away
@@ -32,34 +47,46 @@ struct MatchPlayer: Codable {
     let fullName: String
     let lastName: String
     let ranking: Int
+    
+    static func mockAway() -> MatchPlayer {
+        MatchPlayer(country: "Spain", firstName: "Rafa", fullName: "Rafa Nadal", lastName: "Nadal", ranking: 2)
+    }
+    
+    static func mockHome() -> MatchPlayer {
+        MatchPlayer(country: "Serbia", firstName: "Novak", fullName: "Novak Djokovich", lastName: "Djokovich", ranking: 1)
+    }
 }
 
 // MARK: - Result
 struct MatchResult: Codable {
-    let awaySet1: String?
-    let awaySet2: String?
-    let awaySet3: String?
-    let awaySet4: String?
-    let awaySet5: String?
-    let awaySets: String?
-    let awayTb1: String?
-    let awayTb2: String?
-    let awayTb3: String?
-    let awayTb4: String?
-    let awayTb5: String?
+    var awaySet1: String?
+    var awaySet2: String?
+    var awaySet3: String?
+    var awaySet4: String?
+    var awaySet5: String?
+    var awaySets: String?
+    var awayTb1: String?
+    var awayTb2: String?
+    var awayTb3: String?
+    var awayTb4: String?
+    var awayTb5: String?
     
-    let homeSet1: String?
-    let homeSet2: String?
-    let homeSet3: String?
-    let homeSet4: String?
-    let homeSet5: String?
-    let homeSets: String?
-    let homeTb1: String?
-    let homeTb2: String?
-    let homeTb3: String?
-    let homeTb4: String?
-    let homeTb5: String?
+    var homeSet1: String?
+    var homeSet2: String?
+    var homeSet3: String?
+    var homeSet4: String?
+    var homeSet5: String?
+    var homeSets: String?
+    var homeTb1: String?
+    var homeTb2: String?
+    var homeTb3: String?
+    var homeTb4: String?
+    var homeTb5: String?
     
     let resultDescription: String
-    let winnerID: Int
+    var winnerID: Int?
+    
+    static func mock() -> MatchResult {
+        MatchResult(resultDescription: "6:0, 6:4, 7:5", winnerID: 2)
+    }
 }
